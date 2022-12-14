@@ -6,7 +6,6 @@
  * Return: Always 0 (Success)
 */
 
-
 int main(void)
 {
 	int i, j;
@@ -15,6 +14,7 @@ int main(void)
 	j = 65;
 
 	while (i < 123)
+
 	{
 		putchar(i);
 		i++;
@@ -29,5 +29,4 @@ int main(void)
 	putchar(10);
 
 	return (0);
-
 }
