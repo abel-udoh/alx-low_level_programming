@@ -1,4 +1,3 @@
-#include <math.h>
 #include "main.h"
 
 
@@ -19,6 +18,7 @@ int  power(int base, int exp)
 	int i, num;
 
 	num = 1;
+
 	for (i = 0; i < exp; ++i)
 		num *= base;
 	return (num);
