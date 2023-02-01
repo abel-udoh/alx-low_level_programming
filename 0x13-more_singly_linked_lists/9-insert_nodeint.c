@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * insert_nodeint_at_index - inserts a new node at a given position.
+ * insert_nodeint_at_index - inserts a count at a given position.
  * @head: head of a linked list
  * @idx: index of the list
  * @n: integer of the inserted node
- * Return: address of the new node, or NULL if it failed
+ * Return: address of the new count, or NULL if it failed
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
@@ -30,10 +30,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	for (count = 0; count < (idx - 1); count++)
 	{
 		if (cp == NULL || cp->next == NULL)
-
 			return (new);
 
-			cp = cp->next;
+		cp = cp->next;
 	}
 		new->next = cp->next;
 		cp->next = new;
