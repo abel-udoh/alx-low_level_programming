@@ -10,19 +10,18 @@
 void print_binary(unsigned long int n)
 
 {
-	unsigned long int mask;
+	int on, i;
+	unsigned long int x;
 
-	if (n == 0)
+	on = 0;
+	for (i = 63; i >= 0; i--)
 	{
-		_putchar(0);
+		x = (n >> i) & 1;
+		if (x == 1)
+			on = 1;
+		if (on == 1)
+			_putchar(((n >> i) & 1) + '0');
 	}
-	else
-	{
-		mask = n & 1;
-		n = n >> 1;
-		if (!(n == 0))
-			print_binary(n);
-		_putchar(mask + '0');
-	}
+		if (n == 0)
+			_putchar('0');
 }
-
