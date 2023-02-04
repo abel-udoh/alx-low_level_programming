@@ -20,8 +20,8 @@ void print_binary(unsigned long int n)
 		if (x == 1)
 			on = 1;
 		if (on == 1)
-			_putchar(((n >> i) & 1) + '0');
+			putchar(((n >> i) & 1) + '0');
 	}
 		if (n == 0)
-			_putchar('0');
+			putchar('0');
 }
