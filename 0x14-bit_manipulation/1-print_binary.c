@@ -10,7 +10,7 @@
 void print_binary(unsigned long int n)
 
 {
-	unsigned long int x;
+	unsigned long int mask;
 
 	if (n == 0)
 	{
@@ -18,11 +18,11 @@ void print_binary(unsigned long int n)
 	}
 	else
 	{
-		x = n & 1;
+		mask = n & 1;
 		n = n >> 1;
 		if (!(n == 0))
 			print_binary(n);
-		_putchar(x + '0');
+		_putchar(mask + '0');
 	}
 }
 
