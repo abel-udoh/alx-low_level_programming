@@ -2,6 +2,42 @@
 #include <stdio.h>
 
 /**
+ *  _strlen - returns length of string
+ *  @s: string (const)
+ *  Return: length of string
+ */
+
+int _strlen(const char *s)
+
+{
+	int len = 0;
+
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
+
+/**
+ * power - exponents
+ * @base: base
+ * @exp: exponent
+ * Return: result (int)
+ */
+
+int power(int base, int exp)
+{
+	int i, num;
+
+	num = 1;
+	for (i = 0; i < exp; ++i)
+		num *= base;
+	return (num);
+}
+
+
+/**
  * binary_to_uint - converts a binary number to an unsigned int
  * @b: pointer to a string of 0 and 1 chars
  * Return: converted number, or 0
@@ -9,27 +45,18 @@
 unsigned int binary_to_uint(const char *b)
 
 {
-	unsigned int m, n, l;
+	unsigned int sum;
+	int length, i;
 
-	n = 1 = m = 0;
-
+	sum = 0;
 	if (b == NULL)
-		return (0);
-
-	while (b[l] != '\0')
+		return (sum);
+	length = _strlen(b);
+	for (i = length - 1; i >= 0; i--)
 	{
-		if (b[l] == '0' || b[l] == '1')
-			l++;
-		else
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
+		sum += (b[i] - '0') * power(2, length - i - 1);
 	}
-		while (n < 1)
-		{
-			m = m << 1;
-			if (b[n] == '1')
-				m += 1;
-			n++;
-		}
-		return (m);
+	return (sum);
 }
-
