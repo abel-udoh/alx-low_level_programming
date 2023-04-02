@@ -3,6 +3,7 @@
 """
     Module 1-square
     It defines a square by private instance attribute
+
 """
 
 
