@@ -2,7 +2,7 @@
 
 """
     Module 1-square
-    It Represent a class
+    It defines a square by private instance attribute
 """
 
 
