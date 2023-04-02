@@ -3,17 +3,16 @@
 """
     Module 1-square
     It Represent a class
-""
+"""
 
 
 class Square:
-    "" A class that defines a square"""
+    """A class that defines a square"""
 
 
 def __init__(self, size):
     """__init__ method for square
     Args:
-
     size init - size of square
     """
     self.__size == size
