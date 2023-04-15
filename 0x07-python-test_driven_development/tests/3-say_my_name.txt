@@ -17,13 +17,13 @@ Below are the few cases on how to use the function:
 
 	Case 1: Both arguments are strings
 	------------------------------------
-	>>> say_my_name("            Abel       ", "Udoh")
+	>>> say_my_name("Abel", "Udoh")
 	My name is Abel Udoh
 
 	Case 2: Last name not supplied
 	------------------------------
 	>>> say_my_name("Joel")
-	My name is Joel
+	My name is Joel 
 
 	Case 3: First name not supplied
 	-------------------------------
@@ -36,7 +36,7 @@ Below are the few cases on how to use the function:
 	Traceback (most recent call last):
 	TypeError: first_name must be a string
 
-	>>> say_my_name("Abel", 63)
+	>>> say_my_name("Abe", 63)
 	Traceback (most recent call last):
 	TypeError: last_name must be a string
 
