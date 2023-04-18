@@ -1,59 +1,39 @@
-===========================
-Module 3-say_my_name.py
-===========================
+The ``3-say_my_name`` module
+======================
 
-This modules defines a function ``say_my_name(first_name, last_name="")``.
+Using ``say_my_name``
+-------------------
 
-Usage
-=====
+This is an example text file in reStructuredText format.  First import
+``say_my_name`` from the ``3-say_my_name`` module:
 
-``say_my_name(...)`` prints "My name is <first_name> <last_name>".
+-------------------
 
-::
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("Abel", "Udoh")
-    My name is Abel Udoh
 
-::
+# first_name = str, last_name = str
+>>> say_my_name("Abel", "Udoh")
+My name is Abel Udoh
 
-    >>> say_my_name("David", "Joel")
-    My name is David Joel
+# first_name = str, last_name = ""
+>>> say_my_name("Udoh")
+My name is Udoh 
 
-The parameter ```last_name``` is optional. If no last name is provided,
-an empty string is printed instead.
+# first_name = None, last_name = ""
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
 
-::
+# first_name = None, last_name = None
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
 
-    >>> say_my_name("Udoh")
-    My name is Udoh 
-
-Invalid Names
-=============
-
-The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
-a TypeError is raised.
-
-::
-
-    >>> say_my_name(6, "James")
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
-
-::
-
-    >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
-    Traceback (most recent call last):
-    TypeError: last_name must be a string
-
-::
-
-    >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
-
-::
-
-    >>> say_my_name(None)
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
+# first_name = str, last_name = None
+>>> say_my_name("David", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
