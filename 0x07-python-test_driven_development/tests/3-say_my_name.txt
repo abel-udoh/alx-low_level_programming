@@ -28,7 +28,7 @@ Below are the few cases on how to use the function:
 	Case 3: First name not supplied
 	-------------------------------
 	>>> say_my_name("", "Udoh")
-	My name is  Udoh
+	My name is Udoh
 
 	Case 4: First name or Last name is an int
 	-----------------------------
