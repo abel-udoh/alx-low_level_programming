@@ -2,7 +2,7 @@
 """Defines a function that print a name."""
 
 
-def say_my_name(first_name, last_name=""):
+def say_my_name(first_name="", last_name=""):
     """Print a name.
     Args:
         first_name (str): The first name to print.
@@ -15,4 +15,4 @@ def say_my_name(first_name, last_name=""):
     elif not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
     else:
-        print("My name is {} {}".format(first_name.strip(), last_name.strip()))
+        print("My name is {} {}".format(first_name, last_name))
