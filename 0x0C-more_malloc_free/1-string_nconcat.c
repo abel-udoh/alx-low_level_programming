@@ -7,7 +7,7 @@
  * @s2: second string to copy
  * @n: number of bytes of s2 to copy
  *
- * pointer to a newlly allocated memory with s1 & s2, NULL if it fail
+ * Return: pointer to a newlly allocated memory with s1 & s2, NULL if it fail
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
